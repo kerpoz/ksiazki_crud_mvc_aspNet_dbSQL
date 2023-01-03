@@ -1,0 +1,41 @@
+﻿@model ksiazki_crud.Models.ksiazka
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Książka Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tytul)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tytul)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cena)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
